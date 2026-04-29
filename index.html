@@ -8,25 +8,52 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <h1 class="logo">AI Daily</h1>
-            <p class="tagline">Your daily dose of AI insights</p>
+        <div class="container header-content">
+            <div class="header-left">
+                <h1 class="logo">AI Daily</h1>
+                <p class="tagline">Your daily dose of AI insights</p>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search articles..." id="searchInput">
+                <button class="search-btn">🔍</button>
+            </div>
         </div>
     </header>
 
     <nav class="navbar">
-        <div class="container">
+        <div class="container navbar-content">
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#latest">Latest</a></li>
                 <li><a href="#trending">Trending</a></li>
+                <li><a href="#courses">Courses</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
+            <div class="nav-icons">
+                <a href="#" class="icon-link">🔔</a>
+                <a href="#" class="icon-link">👤</a>
+            </div>
         </div>
     </nav>
 
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-header">
+                <h3>Filter by Category</h3>
+                <button class="filter-reset" id="resetFilters">Reset Filters</button>
+            </div>
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all">All Posts</button>
+                <button class="filter-btn" data-filter="ai-models">AI Models</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                <button class="filter-btn" data-filter="ethics">Ethics</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+            </div>
+        </div>
+    </section>
+
     <main class="container main-content">
-        <section class="blog-posts">
+        <section class="blog-posts" id="blogPosts">
             <article class="post">
                 <h2 class="post-title">GPT-5 Breakthroughs: What's Next in AI?</h2>
                 <div class="post-meta">
@@ -100,14 +127,68 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 AI Daily. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Contact</a>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>AI Daily</h4>
+                <p>Your trusted source for daily AI news, insights, and latest developments in artificial intelligence.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">𝕏</a>
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">📷</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Courses</h4>
+                <ul class="footer-links">
+                    <li><a href="#">AI Fundamentals</a></li>
+                    <li><a href="#">Machine Learning 101</a></li>
+                    <li><a href="#">Deep Learning Basics</a></li>
+                    <li><a href="#">NLP & Language Models</a></li>
+                    <li><a href="#">AI Ethics & Safety</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Webinars</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get daily AI updates in your inbox</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 AI Daily. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
