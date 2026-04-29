@@ -8,25 +8,52 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <h1 class="logo">AI Daily</h1>
-            <p class="tagline">Your daily dose of AI insights</p>
+        <div class="container header-content">
+            <div class="header-left">
+                <h1 class="logo">AI Daily</h1>
+                <p class="tagline">Your daily dose of AI insights</p>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search articles..." id="searchInput">
+                <button class="search-btn">🔍</button>
+            </div>
         </div>
     </header>
 
     <nav class="navbar">
-        <div class="container">
+        <div class="container navbar-content">
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#latest">Latest</a></li>
                 <li><a href="#trending">Trending</a></li>
+                <li><a href="#courses">Courses</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
+            <div class="nav-icons">
+                <a href="#" class="icon-link">🔔</a>
+                <a href="#" class="icon-link">👤</a>
+            </div>
         </div>
     </nav>
 
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-header">
+                <h3>Filter by Category</h3>
+                <button class="filter-reset" id="resetFilters">Reset Filters</button>
+            </div>
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all">All Posts</button>
+                <button class="filter-btn" data-filter="ai-models">AI Models</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                <button class="filter-btn" data-filter="ethics">Ethics</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+            </div>
+        </div>
+    </section>
+
     <main class="container main-content">
-        <section class="blog-posts">
+        <section class="blog-posts" id="blogPosts">
             <article class="post">
                 <h2 class="post-title">GPT-5 Breakthroughs: What's Next in AI?</h2>
                 <div class="post-meta">
@@ -109,5 +136,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
